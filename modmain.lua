@@ -76,6 +76,15 @@ local function MakeFunction(inst)
     end
 
     return function()
+        local TheFrontEnd = GLOBAL.TheFrontEnd
+        local ActiveScreen = TheFrontEnd:GetActiveScreen()
+        local ActiveScreenName = ActiveScreen and TheFrontEnd:GetActiveScreen().name or nil
+
+        if ActiveScreenName and type(ActiveScreenName) == "string" and ActiveScreenName == "ChatInputScreen" then
+            -- do nothing if the key is pressed on chatting
+            return
+        end
+
         if counter == 0 then
             Toggle_HUD(false)
         elseif counter == 1 then

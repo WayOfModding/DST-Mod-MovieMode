@@ -1,6 +1,6 @@
 name                        = "Movie Mode"
 author                      = "KaiserKatze"
-version                     = "1.1.1"
+version                     = "1.2.0"
 description                 = "Version "..version.."\n\nShoot your own movie from now on!\n"..[[
 Press 'C' key (or any other key you bind) to toggle the visibility of the HUD and your character.
 ]]
